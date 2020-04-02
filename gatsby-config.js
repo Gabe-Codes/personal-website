@@ -5,5 +5,16 @@
  */
 
 module.exports = {
-  /* Your site config here */
-}
+    plugins: [
+        'gatsby-plugin-sass',
+        {
+            resolve: 'gatsby-plugin-google-fonts',
+            options: {
+              fonts: [
+                'Roboto', 
+                'sans-serif'
+              ]
+            },
+        },
+    ],
+};

@@ -1,0 +1,159 @@
+.navbar {
+    background-color: #181818;
+    color: white;
+    display: grid;
+    grid-area: nav;
+    margin: 0;
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        margin: 0.8rem;
+    }
+
+    .check {
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+    }
+
+    .pages {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: #17fdda;
+        }
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            font-size: 3vmin;
+        }
+
+        .linkedin {
+            color: #0177b3;
+        }
+
+        .insta {
+            color: #c02174;
+        }
+
+        .github {
+            color: white;
+        }
+
+        .slack {
+            color: #2fb17d;
+        }
+    }
+
+    @media (min-width: 1025px),
+        (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        width: auto;
+        height: 100vh;
+        
+        .pages {
+            flex-direction: column;
+            margin: 0.8rem;
+            height: 15rem;
+        }
+
+        section {
+            flex-direction: column;
+            margin: 0.8rem;
+            height: 15rem;
+        }
+    }
+
+    @media (min-width: 700px) and (max-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100vw;
+        height: 8vh;
+        
+        .pages {
+            flex-direction: row;
+            margin: 0.8rem;
+            width: 15rem;
+        }
+
+        section {
+            flex-direction: row;
+            margin: 0.8rem;
+            width: 10rem;
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 699px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100vw;
+        height: 8vh;
+        
+        nav a {
+            opacity: 0;
+            transition: opacity 150ms ease-in-out;
+        }
+
+        .pages {
+            flex-direction: row;
+            margin: 0.8rem;
+            width: 15rem;
+        }
+
+        .toggle {
+            display: block;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+    
+            a:hover {
+                color: #17fdda;
+            }
+        }
+
+        .toggle:checked ~ nav {
+            transform: scale(1, 1);
+        }
+
+        .toggle:checked ~ nav a {
+            opacity: 1;
+            transition: opacity 250ms ease-in-out 250ms;
+        }
+        
+        section {
+            display: none;
+        }
+    }
+    
+    @media (min-width: 0px) and (max-width: 699px) and (orientation: landscape) {
+            display: none;
+    }
+}

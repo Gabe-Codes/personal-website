@@ -5,7 +5,7 @@ export default () => {
     return (
         <Layout>
             <main>
-                <h1>Home Page</h1>
+                <h1>Projects Page</h1>
             </main>
         </Layout>
     );
