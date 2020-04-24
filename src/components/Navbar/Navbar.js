@@ -13,19 +13,17 @@ import {
     faLinkedin,
     faInstagram,
     faGithub,
-    faSlack,
 } from '@fortawesome/free-brands-svg-icons';
 
 class Navbar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            hover: false,
+            home: <FontAwesomeIcon size="lg" icon={faHome} />,
+            about: <FontAwesomeIcon size="lg" icon={faUser} />,
+            projects: <FontAwesomeIcon size="lg" icon={faFolder} />,
+            contact: <FontAwesomeIcon size="lg" icon={faEnvelope} />,
         };
-    }
-
-    toggleHover() {
-        this.setState({hover: !this.state.hover})
     }
 
     render() {
@@ -34,30 +32,73 @@ class Navbar extends Component {
                 <h1>G C</h1>
                 <input type="checkbox" id="nav-toggle" class={styles.check} />
                 <div className={styles.pages}>
-                    <a href="/" rel="noopener noreferrer">
-                        <FontAwesomeIcon size="lg" icon={faHome} />
-                    </a>
-                    <a href="/about" rel="noopener noreferrer">
-                        <FontAwesomeIcon size="lg" icon={faUser} />
-                    </a>
-                    <a href="/projects" rel="noopener noreferrer">
-                        <FontAwesomeIcon size="lg" icon={faFolder} />
-                    </a>
-                    <a href="/contact" rel="noopener noreferrer">
-                        <FontAwesomeIcon size="lg" icon={faEnvelope} />
-                    </a>
+                    <Link
+                        to="/"
+                        onMouseEnter={() => this.setState({ home: 'HOME' })}
+                        onMouseLeave={() =>
+                            this.setState({
+                                home: (
+                                    <FontAwesomeIcon size="lg" icon={faHome} />
+                                ),
+                            })
+                        }
+                    >
+                        {this.state.home}
+                    </Link>
+                    <Link
+                        to="/about"
+                        onMouseEnter={() => this.setState({ about: 'ABOUT' })}
+                        onMouseLeave={() =>
+                            this.setState({
+                                about: (
+                                    <FontAwesomeIcon size="lg" icon={faUser} />
+                                ),
+                            })
+                        }
+                    >
+                        {this.state.about}
+                    </Link>
+                    <Link
+                        to="/projects"
+                        onMouseEnter={() =>
+                            this.setState({ projects: 'WORK' })
+                        }
+                        onMouseLeave={() =>
+                            this.setState({
+                                projects: (
+                                    <FontAwesomeIcon size="lg" icon={faFolder} />
+                                ),
+                            })
+                        }
+                    >
+                        {this.state.projects}
+                    </Link>
+                    <Link
+                        to="/contact"
+                        onMouseEnter={() =>
+                            this.setState({ contact: 'EMAIL' })
+                        }
+                        onMouseLeave={() =>
+                            this.setState({
+                                contact: (
+                                    <FontAwesomeIcon size="lg" icon={faEnvelope} />
+                                ),
+                            })
+                        }
+                    >
+                        {this.state.contact}
+                    </Link>
                 </div>
-                <label for="nav-toggle" className={styles.toggle}>
+                {/* <label for="nav-toggle" className={styles.toggle}>
                     <a>
                         <FontAwesomeIcon size="lg" icon={faBars} />
                     </a>
-                </label>
+                </label> */}
                 <section>
                     <a
                         className={styles.linkedin}
                         href="https://linkedin.com/in/gabrielrussell/"
                         target="blank"
-                        rel="noopener noreferrer"
                     >
                         <FontAwesomeIcon size="lg" icon={faLinkedin} />
                     </a>
@@ -65,7 +106,6 @@ class Navbar extends Component {
                         className={styles.insta}
                         href="https://instagram.com/Gabe_Codes/"
                         target="blank"
-                        rel="noopener noreferrer"
                     >
                         <FontAwesomeIcon size="lg" icon={faInstagram} />
                     </a>
@@ -73,17 +113,8 @@ class Navbar extends Component {
                         className={styles.github}
                         href="https://github.com/gar0085"
                         target="blank"
-                        rel="noopener noreferrer"
                     >
                         <FontAwesomeIcon size="lg" icon={faGithub} />
-                    </a>
-                    <a
-                        className={styles.slack}
-                        href="https://app.slack.com/client/T0351JZQ0/CT45EG8LV/user_profile/UQLU2R7BK"
-                        target="blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FontAwesomeIcon size="lg" icon={faSlack} />
                     </a>
                 </section>
             </nav>
