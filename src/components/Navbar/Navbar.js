@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import styles from './Navbar.module.scss';
+import logo from '../../assets/img/GC.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faHome,
@@ -29,7 +30,9 @@ class Navbar extends Component {
     render() {
         return (
             <nav className={styles.navbar}>
-                <h1>G C</h1>
+                <div className={styles.imgWrapper}>
+                    <img src={logo} />
+                </div>
                 <input type="checkbox" id="nav-toggle" class={styles.check} />
                 <div className={styles.pages}>
                     <Link
@@ -60,13 +63,14 @@ class Navbar extends Component {
                     </Link>
                     <Link
                         to="/projects"
-                        onMouseEnter={() =>
-                            this.setState({ projects: 'WORK' })
-                        }
+                        onMouseEnter={() => this.setState({ projects: 'WORK' })}
                         onMouseLeave={() =>
                             this.setState({
                                 projects: (
-                                    <FontAwesomeIcon size="lg" icon={faFolder} />
+                                    <FontAwesomeIcon
+                                        size="lg"
+                                        icon={faFolder}
+                                    />
                                 ),
                             })
                         }
@@ -75,13 +79,14 @@ class Navbar extends Component {
                     </Link>
                     <Link
                         to="/contact"
-                        onMouseEnter={() =>
-                            this.setState({ contact: 'EMAIL' })
-                        }
+                        onMouseEnter={() => this.setState({ contact: 'EMAIL' })}
                         onMouseLeave={() =>
                             this.setState({
                                 contact: (
-                                    <FontAwesomeIcon size="lg" icon={faEnvelope} />
+                                    <FontAwesomeIcon
+                                        size="lg"
+                                        icon={faEnvelope}
+                                    />
                                 ),
                             })
                         }

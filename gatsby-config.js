@@ -11,10 +11,20 @@ module.exports = {
             resolve: 'gatsby-plugin-google-fonts',
             options: {
               fonts: [
-                'Roboto', 
+                'Roboto',
                 'sans-serif'
               ]
             },
+        },
+        'gatsby-plugin-sharp',
+        {
+          resolve: `gatsby-plugin-sharp`,
+          options: {
+            useMozJpeg: false,
+            stripMetadata: true,
+            defaultQuality: 75,
+            icon: 'src/assets/img/GC.svg'
+          },
         },
     ],
 };
