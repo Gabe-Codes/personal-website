@@ -31,9 +31,9 @@ class Navbar extends Component {
         return (
             <nav className={styles.navbar}>
                 <div className={styles.imgWrapper}>
-                    <img src={logo} />
+                    <img src={logo}   />
                 </div>
-                <input type="checkbox" id="nav-toggle" class={styles.check} />
+                <input type="checkbox" id="nav-toggle" className={styles.check} />
                 <div className={styles.pages}>
                     <Link
                         to="/"
