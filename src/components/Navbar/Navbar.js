@@ -31,7 +31,7 @@ class Navbar extends Component {
         return (
             <nav className={styles.navbar}>
                 <div className={styles.imgWrapper}>
-                    <img src={logo}   />
+                    <img src={logo} alt="" />
                 </div>
                 <input type="checkbox" id="nav-toggle" className={styles.check} />
                 <div className={styles.pages}>
@@ -77,8 +77,8 @@ class Navbar extends Component {
                     >
                         {this.state.projects}
                     </Link>
-                    <Link
-                        to="/contact"
+                    <a
+                        href="mailto:gabrielarussell99@gmail.com?subject=Business Inquiry"
                         onMouseEnter={() => this.setState({ contact: 'EMAIL' })}
                         onMouseLeave={() =>
                             this.setState({
@@ -92,7 +92,7 @@ class Navbar extends Component {
                         }
                     >
                         {this.state.contact}
-                    </Link>
+                    </a>
                 </div>
                 {/* <label for="nav-toggle" className={styles.toggle}>
                     <a>

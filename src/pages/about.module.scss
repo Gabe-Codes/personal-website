@@ -1,16 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap');
-
-.indexContainer {
+.aboutContainer {
     margin-top: 2%;
 
     .text {
-        margin-top: 8%;
-        margin-bottom: 10.4%;
+        margin-top: 2%;
+        margin-bottom: 12%;
     }
     .header,
     .description,
-    .contact {
+    .resume {
         font-family: 'Baloo Tamma 2', cursive;
         margin-left: 6%;
     }
@@ -20,22 +17,15 @@
     }
 
     .description {
-        font-size: 1.5rem;
+        font-size: 1rem;
+        width: 40%;
         color: #787878;
     }
 
-    .contact {
+    .resume {
         font-size: 1.2rem;
         color: #17fdda;
         text-decoration: none;
-    }
-
-    img {
-        border: solid 2px #787878;
-        position: absolute;
-        top: 6%;
-        right: 6%;
-        width: 30%;
     }
 
     .bodyTag {
@@ -56,8 +46,8 @@ span,
 .header::after,
 .description::before,
 .description::after,
-.contact::before,
-.contact::after {
+.resume::before,
+.resume::after {
     font-family: 'La Belle Aurore', cursive;
     color: #515152;
     font-size: 1rem;
@@ -79,10 +69,25 @@ span,
     content: '</p>';
 }
 
-.contact::before {
+.resume::before {
     content: '<a>';
 }
 
-.contact::after {
+.resume::after {
     content: '</a>';
+}
+
+.skills {
+    position: absolute;
+    right: 6%;
+    top: 4%;
+    background-color: red;
+
+    ul {
+        li {
+            p {
+                color: white;
+            }
+        }
+    }
 }

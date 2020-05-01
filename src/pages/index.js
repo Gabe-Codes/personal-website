@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/Layout/Layout';
 import styles from './index.module.scss';
 import dallas from '../assets/img/dallas.jpg';
@@ -8,7 +7,7 @@ export default () => {
     return (
         <Layout>
             <main>
-                <div className={styles.container}>
+                <div className={styles.indexContainer}>
                     <span className={styles.bodyTag}>&lt;body&gt;</span>
                     <div className={styles.text}>
                         <h1 className={styles.header}>
@@ -20,9 +19,9 @@ export default () => {
                         <p className={styles.description}>
                             Full-Stack Web Developer / Freelancer
                         </p>
-                        <Link className={styles.contact} to="/contact">
+                        <a className={styles.contact} href="mailto:gabrielarussell99@gmail.com?subject=Business Inquiry">
                             CONTACT ME
-                        </Link>
+                        </a>
                     </div>
                     <img src={dallas} alt="" />
                     <span className={styles.bodyTag}>&lt;/body&gt;</span>
