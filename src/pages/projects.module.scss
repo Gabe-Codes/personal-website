@@ -1,0 +1,172 @@
+.paneDarken {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: -1;
+}
+
+.projectPaneTitle {
+    font-family: 'Baloo Tamma 2', cursive;
+    color: white;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 2.5rem;
+}
+
+.projectPaneDescription {
+    font-family: 'Baloo Tamma 2', cursive;
+    color: white;
+    position: absolute;
+    bottom: 35%;
+    margin: 0px 7%;
+    font-size: 2rem;
+}
+
+.projectPane {
+    transition: 0.5s;
+}
+
+.projectPane:hover {
+    transform: scale(1.05);
+}
+
+.projectSelector {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    place-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.projectSelector:hover {
+    transform: scale(1.2);
+    background-color: #000000;
+}
+
+.projectIcon {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    position: absolute;
+}
+
+.leftSelector, .rightSelector {
+    outline: none !important
+}
+
+.leftSelector {
+    position: absolute;
+    top: 40%;
+    left: 12%;
+    width: 50px;
+    height: 75px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+.rightSelector:hover,
+.leftSelector:hover {
+    transform: scale(1.1);
+}
+
+.leftSelector:hover,
+.leftSelector:before,
+.leftSelector:after,
+.rightSelector:hover,
+.rightSelector:before,
+.rightSelector:after {
+    cursor: pointer;
+}
+
+.leftSelector:hover,
+.rightSelector:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.leftSelector:before {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    width: 25px;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: white;
+}
+
+.leftSelector:after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    width: 25px;
+    height: 2px;
+    transform: rotate(125deg);
+    background-color: white;
+}
+
+.rightSelector {
+    position: absolute;
+    top: 40%;
+    right: 12%;
+    width: 50px;
+    height: 75px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+.rightSelector:before {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    width: 25px;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: white;
+}
+
+.rightSelector:after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    width: 25px;
+    height: 2px;
+    transform: rotate(125deg);
+    background-color: white;
+}
+
+.projectPane {
+    background: linear-gradient(to right top, #41a5d7, #00853e);
+    width: 50%;
+    height: 50vh;
+    margin: 0px auto;
+    z-index: 2;
+    position: relative;
+    background-image: url('../assets/img/corona-chasers.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /* Center the image */
+}
+
+.projectsPageCarousel {
+    position: relative;
+    margin-top: 10%;
+}
